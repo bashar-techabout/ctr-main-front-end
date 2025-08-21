@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-karla: "Karla", sans-serif;
+  --color-theme-primary: #ffb254;
+  --max-width-theme-width: 1440px;
+  --border-color-theme-border: #c1d1ee;
+  --shadow-masonry: 0px 0px 36px 0px rgba(0, 0, 0, 0.16);
+  --shadow-trusted: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+  --shadow-about: 0px 7px 23.49px 3.51px rgba(0, 0, 0, 0.1);
+  --shadow-testimonials: 0px 14px 16px 0px rgba(14, 16, 14, 0.23);
+  --background-image-hero: linear-gradient(
+    to bottom left,
+    rgba(255, 178, 84, 0.50196) 3%,
+    rgba(171, 222, 203, 0.50196) 55%,
+    rgb(219, 244, 235) 100%
+  );
+  --background-image-trusted-leaders: linear-gradient(
+    to bottom right,
+    rgba(255, 178, 84, 0.50196) 3%,
+    rgba(171, 222, 203, 0.50196) 55%,
+    rgb(219, 244, 235) 100%
+  );
+  --background-image-cta-gradient: linear-gradient(
+    to right,
+    rgb(245, 184, 154) 0%,
+    rgb(247, 155, 74) 100%
+  );
+  --background-image-theme-features: linear-gradient(
+    to top,
+    rgb(244, 247, 252) 61%,
+    rgb(195, 210, 238) 100%
+  );
+  --background-image-theme-compatibility: linear-gradient(
+    to top,
+    rgb(242, 251, 253) 61%,
+    rgb(180, 234, 243) 100%
+  );
+  --background-image-theme-whatyouget: linear-gradient(
+    to top,
+    rgb(249, 245, 255) 61%,
+    rgb(222, 195, 255) 100%
+  );
+}
+
+.swiper-pagination-bullet {
+  background-color: #010101 !important;
+  width: 12px !important;
+  height: 12px !important;
+}

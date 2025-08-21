@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <title>CTRSpace | Pricing</title>
+</head>
+
+<body class="overflow-x-hidden font-karla">
+  <header
+    class="bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-out data-[scrolled=true]:bg-white data-[scrolled=true]:shadow-md"
+    id="siteHeader" data-scrolled="false">
+    <nav id="siteNav"
+      class="max-w-theme-width mx-auto flex items-center justify-between data-[scrolled=true]:py-5 py-10 px-4 md:px-6 lg:px-8 transition-all duration-300 ease-out">
+      <a href="/" class="flex items-center space-x-2">
+        <img src="/images/ctr-space-logo.png" alt="Site Logo" class="h-full w-40" />
+      </a>
+      <div class="flex items-center justify-end sm:gap-8 gap-4">
+        <div class="flex items-center gap-8">
+          <ul class="hidden lg:flex items-center space-x-8 font-semibold text-sm lg:text-base">
+            <li>
+              <a href="#" class="hover:text-theme-primary transition-colors duration-200">Nice Features</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-theme-primary transition-colors duration-200">The Magic</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-theme-primary transition-colors duration-200">Why CTRSpace?</a>
+            </li>
+            <li>
+              <a href="/contact-us.html" class="hover:text-theme-primary transition-colors duration-200">Contact Us</a>
+            </li>
+          </ul>
+          <div class="flex items-center sm:space-x-8 space-x-0">
+            <a id="openSearch" href="#" role="button" aria-label="Open search"
+              class="p-2 text-gray-700 hover:text-gray-900">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-5 w-5">
+                <path
+                  d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z" />
+              </svg>
+            </a>
+            <a href="/pricing.html"
+              class="w-36 h-10 rounded-md hidden sm:flex items-center justify-center bg-black hover:bg-theme-primary text-white transition-all duration-200">BUY
+              NOW</a>
+          </div>
+        </div>
+        <button id="sidebarToggle"
+          class="lg:hidden flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 focus:outline-none"
+          aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <div id="sidebarOverlay"
+      class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none">
+    </div>
+    <aside id="sidebar"
+      class="fixed top-0 right-0 z-50 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 block">
+      <button id="sidebarClose" class="cursor-pointer absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100"
+        aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <nav class="mt-20 flex flex-col items-start px-8 space-y-6 font-medium text-base">
+        <a href="#" class="hover:text-theme-primary transition-colors duration-200">Nice Features</a>
+        <a href="#" class="hover:text-theme-primary transition-colors duration-200">The Magic</a>
+        <a href="#" class="hover:text-theme-primary transition-colors duration-200">Why CTRSpace?</a>
+        <a href="/contact-us.html" class="hover:text-theme-primary transition-colors duration-200">Contact Us</a>
+        <a href="/pricing.html"
+          class="w-full mt-8 h-12 rounded-md sm:hidden flex items-center justify-center bg-black hover:bg-theme-primary text-white transition-all duration-200">BUY
+          NOW</a>
+      </nav>
+    </aside>
+    <div id="searchOverlay"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none">
+      <div id="searchBox" class="w-full max-w-2xl px-4 transition duration-300 transform-gpu scale-95 opacity-0">
+        <div class="relative">
+          <input type="search" autofocus placeholder="Search…"
+            class="w-full rounded-lg bg-white/90 py-4 pl-14 pr-12 text-lg text-gray-900 shadow-lg placeholder-gray-500 focus:outline-none" />
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="pointer-events-none absolute left-4 top-1/2 h-6 w-6 -translate-y-1/2 text-gray-500" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <a id="closeSearch" href="#" role="button" aria-label="Close search"
+            class="absolute right-4 top-1/2 h-6 w-6 -translate-y-1/2 text-gray-500 hover:text-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" fill="none">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-hero w-full">
+      <div class="max-w-7xl mx-auto pt-32 pb-16 px-4 md:px-6 lg:px-8 text-center">
+        <h1 class="font-normal lg:text-8xl sm:text-6xl text-4xl" data-aos="zoom-in" data-aos-delay="100">
+          <span class="text-theme-primary">Pricing</span> Plan
+        </h1>
+      </div>
+    </section>
+
+    <section class="pt-16 pb-12">
+      <div class="mx-auto max-w-theme-width px-4">
+        <div class="text-center">
+          <h2 class="font-medium text-3xl sm:text-4xl md:text-5xl" data-aos="fade-up">
+            Easy Pricing, Maximum Worth
+          </h2>
+          <p class="mt-5 sm:text-lg text-base text-gray-800 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+            luctus hendrerit rutrum. Suspendisse in risus quis dui molestie
+            faucibus. Aenean at dapibus est, rhoncus convallis nisl.
+          </p>
+        </div>
+        <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3 mt-16">
+          <div class="rounded-xl bg-theme-features p-8 ring-1 ring-[#B4C6EA]/50 backdrop-blur-sm" data-aos="fade-up"
+            data-aos-delay="0">
+            <header class="text-center mb-5">
+              <h3 class="mb-8 rounded-md bg-[#B4C6EA] px-6 py-3 text-center text-2xl sm:text-3xl ring-1 ring-black/5">
+                Starter Plan
+              </h3>
+              <p class="font-medium text-base">
+                Suitable for beginners and business owners
+              </p>
+            </header>
+            <div class="mb-5 text-center">
+              <div class="flex items-end gap-1 mx-auto w-fit mb-5">
+                <div class="font-bold text-5xl">$49</div>
+                <span class="text-sm text-gray-700 mb-1">/ Year</span>
+              </div>
+              <div class="mt-1">
+                Normally $59
+                <span class="ml-1 rounded bg-cta-gradient px-2 py-[3px] text-xs font-bold uppercase">
+                  Save 16%
+                </span>
+              </div>
+            </div>
+            <p class="font-semibold text-base capitalize mb-5">
+              Starter Plan Includes:
+            </p>
+            <ul class="space-y-4">
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Versatility
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                3 homepage options
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Creative single pages for landing or apps
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                SEO-optimized
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Smart ad spaces (AdSense heat-map)
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Boxed / full-width layout
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                100 % customizable
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Video support
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Widget-ready sidebars
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Super-awesome design
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                WordPress menus ready
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Featured images for posts
+              </li>
+            </ul>
+            <div class="mt-8">
+              <a href="#" data-popup-target="#pricingPopup"
+                class="inline-block cursor-pointer rounded bg-cta-gradient bg-gradient-to-r px-10 py-3 uppercase font-bold text-base transition hover:opacity-90">
+                GET STANDARD PLAN
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-xl bg-theme-compatibility p-8 ring-1 ring-[#97DDE9]/50 backdrop-blur-sm"
+            data-aos="fade-up" data-aos-delay="100">
+            <header class="text-center mb-5">
+              <h3 class="mb-8 rounded-md bg-[#97DDE9] px-6 py-3 text-center text-2xl sm:text-3xl ring-1 ring-black/5">
+                Pro Package
+              </h3>
+              <p class="font-medium text-base">
+                Perfect for Freelancers and Creators
+              </p>
+            </header>
+            <div class="mb-5 text-center">
+              <div class="flex items-end gap-1 mx-auto w-fit mb-5">
+                <div class="font-bold text-5xl">$79</div>
+                <span class="text-sm text-gray-700 mb-1">/ Year</span>
+              </div>
+              <div class="mt-1">
+                Normally $99
+                <span class="ml-1 rounded bg-cta-gradient px-2 py-[3px] text-xs font-bold uppercase">
+                  Save 20%
+                </span>
+              </div>
+            </div>
+            <p class="font-semibold text-base capitalize mb-5">
+              Pro Package Includes:
+            </p>
+            <ul class="space-y-4 mb-10">
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                WordPress
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Bootstrap 3+
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Cross-browser
+              </li>
+            </ul>
+            <h4 class="mb-6 rounded border border-[#b8cfec] px-4 py-2 text-center font-medium text-xl">
+              Technical Features
+            </h4>
+            <ul class="space-y-4 mb-10">
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                User-friendly design
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                HTML5/CSS3/jQuery tech
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Minified assets
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                SEO-friendly structure
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Optimized ad spaces
+              </li>
+            </ul>
+            <h4 class="mb-6 rounded border border-[#b8cfec] px-4 py-2 text-center font-medium text-xl">
+              Theme Requirements
+            </h4>
+            <ul class="space-y-4">
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Self-hosted WordPress
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Some plugins (auto-installed)
+              </li>
+            </ul>
+            <div class="mt-8">
+              <a href="#"
+                class="inline-block cursor-pointer rounded bg-cta-gradient bg-gradient-to-r px-10 py-3 uppercase font-bold text-base transition hover:opacity-90">
+                GET PRO PACKAGE
+              </a>
+            </div>
+          </div>
+
+          <div class="rounded-xl bg-theme-whatyouget p-8 ring-1 ring-[#D1AFFB]/50 backdrop-blur-sm" data-aos="fade-up"
+            data-aos-delay="200">
+            <header class="text-center mb-5">
+              <h3 class="mb-8 rounded-md bg-[#D1AFFB] px-6 py-3 text-center text-2xl sm:text-3xl ring-1 ring-black/5">
+                Elite Access
+              </h3>
+              <p class="font-medium text-base">
+                Complete solutions for Agencies
+              </p>
+            </header>
+            <div class="mb-5 text-center">
+              <div class="flex items-end gap-1 mx-auto w-fit mb-5">
+                <div class="font-bold text-5xl">$149</div>
+                <span class="text-sm text-gray-700 mb-1">/ Year</span>
+              </div>
+              <div class="mt-1">
+                Normally $199
+                <span class="ml-1 rounded bg-cta-gradient px-2 py-[3px] text-xs font-bold uppercase">
+                  Save 25%
+                </span>
+              </div>
+            </div>
+            <p class="font-semibold text-base capitalize mb-5">
+              Elite Access Includes:
+            </p>
+            <ul class="space-y-4 mb-10">
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                ZIP compressed theme files
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Installation instructions
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                1-year free updates (personal/business)
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Lifetime updates (developer)
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                1-year world-class support
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Lifetime world-class support (developer)
+              </li>
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Installation instructions
+              </li>
+            </ul>
+            <h4 class="mb-6 rounded border border-[#b8cfec] px-4 py-2 text-center font-medium text-xl">
+              License Information
+            </h4>
+            <ul class="space-y-4">
+              <li
+                class="relative ps-7 before:absolute before:left-0 before:top-0 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                This CTRSpace theme is a protected digital property of
+                CTRSpace.com.
+              </li>
+            </ul>
+            <div class="mt-8">
+              <a href="#"
+                class="inline-block cursor-pointer rounded bg-cta-gradient bg-gradient-to-r px-10 py-3 uppercase font-bold text-base transition hover:opacity-90">
+                GET ELITE ACCESS
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popup -->
+    <div id="pricingPopup" class="fixed inset-0 z-50 hidden">
+      <div class="absolute inset-0 bg-black/80 z-0" data-popup-overlay></div>
+      <div class="flex items-start justify-center h-full p-5 overflow-y-auto">
+        <div class="relative w-full max-w-2xl rounded-lg bg-white">
+          <button type="button" aria-label="Close" data-popup-close
+            class="absolute -top-4 -right-4 z-40 h-9 w-9 flex items-center justify-center border-2 border-black rounded-full bg-cta-gradient text-white cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-6 w-6 fill-white">
+              <path
+                d="M320 112C434.9 112 528 205.1 528 320C528 434.9 434.9 528 320 528C205.1 528 112 434.9 112 320C112 205.1 205.1 112 320 112zM320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM231 231C221.6 240.4 221.6 255.6 231 264.9L286 319.9L231 374.9C221.6 384.3 221.6 399.5 231 408.8C240.4 418.1 255.6 418.2 264.9 408.8L319.9 353.8L374.9 408.8C384.3 418.2 399.5 418.2 408.8 408.8C418.1 399.4 418.2 384.2 408.8 374.9L353.8 319.9L408.8 264.9C418.2 255.5 418.2 240.3 408.8 231C399.4 221.7 384.2 221.6 374.9 231L319.9 286L264.9 231C255.5 221.6 240.3 221.6 231 231z" />
+            </svg>
+          </button>
+          <div class="w-full max-w-2xl bg-white rounded-lg p-5">
+            <!-- Top progress -->
+            <div class="">
+              <div class="flex items-center gap-4 relative rounded-md bg-[#f0f2f4] overflow-hidden">
+                <div
+                  class="w-[80%] text-xs sm:text-sm font-medium text-white bg-[#02bc7d] py-2 px-4 flex items-center justify-between">
+                  <p>You are one step away from your new tool</p>
+                  <p>80%</p>
+                </div>
+              </div>
+            </div>
+            <!-- Tabs -->
+            <div class="pt-4">
+              <div class="grid grid-cols-2 gap-4">
+                <button
+                  class="h-10 rounded border border-theme-border text-xs sm:text-sm font-semibold cursor-pointer transition bg-white hover:bg-cta-gradient">REGISTER</button>
+                <button
+                  class="h-10 rounded border border-theme-border text-xs sm:text-sm font-semibold cursor-pointer transition bg-white hover:bg-cta-gradient">LOGIN</button>
+              </div>
+            </div>
+            <!-- Social -->
+            <div class="pt-4">
+              <button
+                class="w-full h-10 rounded border border-theme-border text-sm sm:text-base font-medium flex items-center justify-center gap-3 cursor-pointer transition bg-white hover:bg-cta-gradient">
+                <img src="/images/google-colored.png" alt="google" class="h-5 w-5" />
+                Continue With Google
+              </button>
+            </div>
+            <!-- Form fields -->
+            <div class="pt-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input type="email" placeholder="Email Address"
+                  class="h-10 w-full rounded bg-[#f0f2f4] px-3 text-sm outline-none font-medium" />
+                <input type="password" placeholder="Password"
+                  class="h-10 w-full rounded bg-[#f0f2f4] px-3 text-sm outline-none font-medium" />
+                <input type="text" placeholder="First Name"
+                  class="h-10 w-full rounded bg-[#f0f2f4] px-3 text-sm outline-none font-medium" />
+                <input type="text" placeholder="Last Name"
+                  class="h-10 w-full rounded bg-[#f0f2f4] px-3 text-sm outline-none font-medium" />
+              </div>
+            </div>
+            <!-- Plan row -->
+            <div class="pt-4">
+              <div
+                class="flex items-center justify-between rounded border border-theme-border px-3 py-3 text-sm sm:text-base">
+                <span>Starter Plan — Annual Subscription - 1 Site</span>
+                <div class="flex items-center gap-2">
+                  <span class="line-through">$58.00</span>
+                  <span class="font-semibold">$49.26</span>
+                </div>
+              </div>
+              <div class="mt-3 flex justify-end items-center gap-2">
+                <p class="text-[#02bc7d] text-sm sm:text-base">
+                  <span class="font-semibold">GIVEA1</span> discount code has been applied successfully!
+                </p>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"
+                    class="h-4 w-4 fill-black hover:fill-red-500">
+                    <path
+                      d="M320 112C434.9 112 528 205.1 528 320C528 434.9 434.9 528 320 528C205.1 528 112 434.9 112 320C112 205.1 205.1 112 320 112zM320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576zM231 231C221.6 240.4 221.6 255.6 231 264.9L286 319.9L231 374.9C221.6 384.3 221.6 399.5 231 408.8C240.4 418.1 255.6 418.2 264.9 408.8L319.9 353.8L374.9 408.8C384.3 418.2 399.5 418.2 408.8 408.8C418.1 399.4 418.2 384.2 408.8 374.9L353.8 319.9L408.8 264.9C418.2 255.5 418.2 240.3 408.8 231C399.4 221.7 384.2 221.6 374.9 231L319.9 286L264.9 231C255.5 221.6 240.3 221.6 231 231z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <!-- VIP support -->
+            <div class="pt-4">
+              <div class="rounded border border-theme-border p-3">
+                <label class="flex items-start gap-3 cursor-pointer">
+                  <input type="checkbox" class="mt-1 accent-green-600" />
+                  <div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-sm sm:text-base font-semibold">VIP Priority Support</span>
+                      <span
+                        class="inline-flex h-4 w-4 items-center justify-center rounded-full border border-[#02bc7d] text-xs text-[#02bc7d]">i</span>
+                    </div>
+                    <p class="mt-1 text-sm sm:text-base">
+                      Add VIP Priority Support to your licenses for just $49/year. Get the highest priority
+                      and faster resolutions for your support tickets.
+                    </p>
+                  </div>
+                </label>
+              </div>
+            </div>
+            <!-- Payment methods -->
+            <div class="pt-4">
+              <p class="text-base sm:text-lg font-semibold">Select Payment Method</p>
+
+              <div class="mt-2 grid gap-2">
+                <label class="flex items-center justify-between cursor-pointer">
+                  <span class="flex items-center gap-2 text-sm sm:text-base font-medium">
+                    <input type="radio" name="pay" class="accent-green-600" checked />
+                    Pay with Credit / Debit Card
+                  </span>
+                  <div class="flex items-center justify-end flex-wrap gap-2">
+                    <img src="/images/credit-card-1.png" alt="credit-card" class="w-10 h-auto object-cover" />
+                    <img src="/images/credit-card-2.png" alt="credit-card" class="w-10 h-auto object-cover" />
+                    <img src="/images/credit-card-3.png" alt="credit-card" class="w-10 h-auto object-cover" />
+                    <img src="/images/credit-card-4.png" alt="credit-card" class="w-10 h-auto object-cover" />
+                  </div>
+                </label>
+
+                <label class="flex items-center gap-2 cursor-pointer">
+                  <input type="radio" name="pay" class="accent-green-600" />
+                  <span class="text-sm sm:text-base font-medium">Paypal</span>
+                </label>
+              </div>
+            </div>
+            <!-- CTA -->
+            <div class="pt-4">
+              <button
+                class="w-full h-11 rounded bg-cta-gradient uppercase text-sm font-bold cursor-pointer transition hover:opacity-90">
+                CHECKOUT WITH CARD
+              </button>
+              <p class="mt-3 text-center text-sm font-medium">
+                By making the purchase, you agree to our
+                <a href="#" class="text-[#02bc7d] transition-colors hover:underline underline-offset-2">Terms and
+                  Conditions</a> and
+                <a href="#" class="text-[#02bc7d] transition-colors hover:underline underline-offset-2">Privacy
+                  Policy</a>.
+              </p>
+            </div>
+            <!-- Trust row -->
+            <div class="pt-4">
+              <div class="flex items-center justify-center flex-wrap gap-8">
+                <a href="#" class="">
+                  <img src="/images/paypal.png" alt="paypal" class="max-w-4/5">
+                </a>
+                <a href="#" class="">
+                  <img src="/images/stripe.png" alt="stripe" class="max-w-4/5">
+                </a>
+                <a href="#" class="">
+                  <img src="/images/visa.png" alt="visa" class="max-w-4/5">
+                </a>
+              </div>
+            </div>
+            <!-- Guarantee -->
+            <div class="text-center pt-4">
+              <p class="text-sm sm:text-base font-medium">14 Days Money Back Guarantee! 100% Secure Checkout</p>
+              <p class="text-sm sm:text-base text-[#02bc7d] font-medium">Trusted by More than 1,000,000+ Websites
+                Worldwide</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="py-12">
+      <div class="mx-auto max-w-theme-width px-4">
+        <div class="text-center">
+          <h2 class="font-medium text-3xl sm:text-4xl md:text-5xl" data-aos="fade-up">
+            Plugins Compatibility
+          </h2>
+          <p class="mt-5 sm:text-lg text-base text-gray-800 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            TheGem is fully compatible with popular WordPress plugins like
+            Yoast, ACF, Dokan, Jetpack, The Events Calendar, Loco Translate,
+            Polylang, Wordfence and much more.
+          </p>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8 mt-16">
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="0">
+            <img src="/images/plugin-compatibility-1.png" alt="Elementor logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">Elementor</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="100">
+            <img src="/images/plugin-compatibility-2.png" alt="WooCommerce logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">WooCommerce</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="200">
+            <img src="/images/plugin-compatibility-3.png" alt="WPML logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">WPML</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="300">
+            <img src="/images/plugin-compatibility-4.png" alt="Contact Forms 7 logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">Contact Forms 7</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="400">
+            <img src="/images/plugin-compatibility-5.png" alt="MailChimp logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">MailChimp</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="500">
+            <img src="/images/plugin-compatibility-6.png" alt="SEO by Yoast logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">SEO by Yoast</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="600">
+            <img src="/images/plugin-compatibility-7.png" alt="Toolset logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">Toolset</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="700">
+            <img src="/images/plugin-compatibility-8.png" alt="Polylang logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">Polylang</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="800">
+            <img src="/images/plugin-compatibility-9.png" alt="ACF logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">ACF</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="900">
+            <img src="/images/plugin-compatibility-10.png" alt="Events Calendar logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">The Events Calendar</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="1000">
+            <img src="/images/plugin-compatibility-11.png" alt="Jetpack logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">Jetpack</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="1100">
+            <img src="/images/plugin-compatibility-12.png" alt="Rank Math logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">Rank Math</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="1200">
+            <img src="/images/plugin-compatibility-13.png" alt="Loco Translate logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">Loco Translate</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="1300">
+            <img src="/images/plugin-compatibility-14.png" alt="All in One SEO Pack logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold leading-snug">All in One SEO Pack</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="1400">
+            <img src="/images/plugin-compatibility-15.png" alt="Gravity Forms logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">Gravity Forms</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="1500">
+            <img src="/images/plugin-compatibility-16.png" alt="W3 Total Cache logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">W3 Total Cache</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="1600">
+            <img src="/images/plugin-compatibility-17.png" alt="iThemes Security logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">iThemes Security</span>
+          </a>
+          <a href="#"
+            class="flex sm:w-[250px] w-full flex-col items-center rounded-lg bg-[#f6fafc] p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:shadow-md"
+            data-aos="zoom-in" data-aos-delay="1700">
+            <img src="/images/plugin-compatibility-18.png" alt="WP Super Cache logo" class="mb-6 max-w-full" />
+            <span class="text-lg font-bold">WP Super Cache</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-12 -mb-28 relative z-10">
+      <div
+        class="2xl:mx-auto mx-4 max-w-theme-width lg:rounded-[3rem] sm:rounded-4xl rounded-2xl bg-newsletter-gradient sm:px-8 px-4 lg:py-24 sm:py-12 py-8 text-center shadow-xl bg-[url(/images/green-bg.png)] bg-no-repeat bg-cover">
+        <div class="text-center">
+          <h2 class="font-medium text-3xl sm:text-4xl md:text-5xl">
+            Subscribe to Our Newsletter
+          </h2>
+          <p class="font-semibold mt-5 sm:text-lg text-base">
+            Sign up for our newsletter, and we'll bring you the latest deals,
+            ideas, and updates!
+          </p>
+        </div>
+        <form class="mx-auto mt-10 flex sm:flex-row flex-col sm:gap-0 gap-3 max-w-3xl">
+          <label class="relative flex-1">
+            <span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-5 w-5 fill-gray-500">
+                <path
+                  d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z" />
+              </svg>
+            </span>
+            <input type="email" required placeholder="Your email address"
+              class="h-14 w-full rounded-l-md sm:rounded-r-none rounded-r-md border-0 ps-12 bg-white text-gray-700 placeholder-gray-400 shadow-sm outline-none focus:ring-2 focus:ring-[#F79A4A]" />
+          </label>
+          <button type="submit"
+            class="flex h-14 items-center justify-center gap-2 cursor-pointer rounded-r-md sm:rounded-l-none rounded-l-md bg-black sm:px-8 font-semibold text-white transition hover:bg-theme-primary">
+            Get Started
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-5 w-5 fill-white">
+              <path
+                d="M568.4 37.7C578.2 34.2 589 36.7 596.4 44C603.8 51.3 606.2 62.2 602.7 72L424.7 568.9C419.7 582.8 406.6 592 391.9 592C377.7 592 364.9 583.4 359.6 570.3L295.4 412.3C290.9 401.3 292.9 388.7 300.6 379.7L395.1 267.3C400.2 261.2 399.8 252.3 394.2 246.7C388.6 241.1 379.6 240.7 373.6 245.8L261.2 340.1C252.1 347.7 239.6 349.7 228.6 345.3L70.1 280.8C57 275.5 48.4 262.7 48.4 248.5C48.4 233.8 57.6 220.7 71.5 215.7L568.4 37.7z" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative text-white">
+    <div class="absolute inset-0">
+      <img src="/images/footer-bg.png" alt="Footer Background Image" class="h-full w-full object-cover" />
+    </div>
+    <div class="relative max-w-theme-width mx-auto px-4 pt-40 pb-16">
+      <div class="grid grid-cols-12 gap-y-12 gap-x-0 sm:gap-x-12">
+        <div class="space-y-8 col-span-12 sm:col-span-6 lg:col-span-5">
+          <img src="/images/ctr-space-footer-logo.png" alt="Footer logo" class="h-10" />
+          <p class="max-w-sm leading-relaxed">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-center gap-3">
+              <img src="/images/footer-contact.png" alt="footer-contact" class="w-fit h-full" />
+              <div>
+                <span class="block font-medium text-white/70">Phone</span>
+                +92 42 35692952
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <img src="/images/footer-address.png" alt="footer-address" class="w-fit h-full" />
+              <div>
+                <span class="block font-medium text-white/70">Address</span>
+                30-N Gould St Ste R, Sheridan, WY 82801 USA
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <img src="/images/footer-email.png" alt="footer-email" class="w-fit h-full" />
+              <div>
+                <span class="block font-medium text-white/70">Email</span>
+                needhelp@ctrspace.com
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-2">
+          <h3 class="mb-6 font-medium text-2xl text-theme-primary">
+            Useful Links
+          </h3>
+          <ul class="space-y-3 text-sm">
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">About Us</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Our Services</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Our Themes</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Customization Offers</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Themes & Templates</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">All Products</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Our Blogs</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Plugins</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">FAQ</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Careers</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-2">
+          <h3 class="mb-6 font-medium text-2xl text-theme-primary">
+            Categories
+          </h3>
+          <ul class="space-y-3 text-sm">
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">IT and Software</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Site Templates</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">UI Templates</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Template Kits</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Email Templates</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">WordPress</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Blogging</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Marketing</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">CMS Themes</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">eCommerce</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Health & Fitness</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-3">
+          <h3 class="mb-6 font-medium text-2xl text-theme-primary">
+            Latest Themes
+          </h3>
+          <ul class="divide-y divide-white/10 text-sm">
+            <li class="flex gap-4 items-center py-3">
+              <img src="/images/footer-article-1.png" alt="footer article image"
+                class="h-16 w-20 flex-none rounded-md object-cover" />
+              <div>
+                <a href="#" class="font-medium hover:text-theme-primary">Crypto Icon Theme</a>
+                <p class="mt-1 text-xs text-white/70">October 20, 2024</p>
+              </div>
+            </li>
+            <li class="flex gap-4 items-center py-3">
+              <img src="/images/footer-article-1.png" alt="footer article image"
+                class="h-16 w-20 flex-none rounded-md object-cover" />
+              <div>
+                <a href="#" class="font-medium hover:text-theme-primary">Health Icon Theme</a>
+                <p class="mt-1 text-xs text-white/70">October 20, 2024</p>
+              </div>
+            </li>
+            <li class="flex gap-4 items-center py-3">
+              <img src="/images/footer-article-1.png" alt="footer article image"
+                class="h-16 w-20 flex-none rounded-md object-cover" />
+              <div>
+                <a href="#" class="font-medium hover:text-theme-primary">UnoBlog Theme</a>
+                <p class="mt-1 text-xs text-white/70">October 20, 2024</p>
+              </div>
+            </li>
+            <li class="flex gap-4 items-center py-3">
+              <img src="/images/footer-article-1.png" alt="footer article image"
+                class="h-16 w-20 flex-none rounded-md object-cover" />
+              <div>
+                <a href="#" class="font-medium hover:text-theme-primary">Icon Arena Theme</a>
+                <p class="mt-1 text-xs text-white/70">October 20, 2024</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="relative border-t border-white/10">
+      <div
+        class="max-w-theme-width mx-auto flex flex-col-reverse items-center justify-between gap-6 px-4 py-6 md:flex-row">
+        <p class="text-sm">
+          &copy; 2025 CTRSpace by TechAbout. All Rights Reserved.
+        </p>
+
+        <ul class="flex flex-wrap justify-center gap-6 text-sm">
+          <li>
+            <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Help Center</a>
+          </li>
+          <li>
+            <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Authors</a>
+          </li>
+          <li>
+            <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Privacy Policy</a>
+          </li>
+          <li>
+            <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <button id="toTop" aria-label="Scroll to top"
+        class="fixed bottom-6 right-6 z-50 hidden flex cursor-pointer h-12 w-12 items-center justify-center rounded-full bg-theme-primary text-white shadow-lg transition hover:bg-theme-primary/90">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-6 w-6">
+          <path
+            d="M297.4 169.4C309.9 156.9 330.2 156.9 342.7 169.4L534.7 361.4C547.2 373.9 547.2 394.2 534.7 406.7C522.2 419.2 501.9 419.2 489.4 406.7L320 237.3L150.6 406.6C138.1 419.1 117.8 419.1 105.3 406.6C92.8 394.1 92.8 373.8 105.3 361.3L297.3 169.3z" />
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      function show(el) { el.classList.remove('hidden'); }
+      function hide(el) { el.classList.add('hidden'); }
+
+      document.addEventListener('click', function (e) {
+        const openBtn = e.target.closest('[data-popup-target]');
+        if (openBtn) {
+          e.preventDefault();
+          const sel = openBtn.getAttribute('data-popup-target');
+          const popup = document.querySelector(sel);
+          if (popup) show(popup);
+          return;
+        }
+        if (e.target.closest('[data-popup-close]')) {
+          const popup = document.getElementById('pricingPopup');
+          if (popup) hide(popup);
+          return;
+        }
+        if (e.target.matches('[data-popup-overlay]')) {
+          const popup = document.getElementById('pricingPopup');
+          if (popup) hide(popup);
+        }
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          const popup = document.getElementById('pricingPopup');
+          if (popup && !popup.classList.contains('hidden')) hide(popup);
+        }
+      });
+    })();
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="/src/scripts.js"></script>
+</body>
+
+</html>
