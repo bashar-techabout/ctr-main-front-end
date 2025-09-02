@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="/src/style.css" />
+  <title>CTRSpace | Our Services</title>
+</head>
+
+<body class="overflow-x-hidden font-karla">
+  <header
+    class="bg-transparent fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-out data-[scrolled=true]:bg-white data-[scrolled=true]:shadow-md"
+    id="siteHeader" data-scrolled="false">
+    <nav id="siteNav"
+      class="max-w-theme-width mx-auto flex items-center justify-between data-[scrolled=true]:py-5 py-10 px-4 md:px-6 lg:px-8 transition-all duration-300 ease-out">
+      <a href="/" class="flex items-center space-x-2">
+        <img src="/images/ctr-space-logo.png" alt="Site Logo" class="h-full w-40" />
+      </a>
+      <div class="flex items-center justify-end sm:gap-8 gap-4">
+        <div class="flex items-center gap-8">
+          <ul class="hidden lg:flex items-center space-x-8 font-semibold text-sm lg:text-base">
+            <li>
+              <a href="#" class="hover:text-theme-primary transition-colors duration-200">Nice Features</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-theme-primary transition-colors duration-200">The Magic</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-theme-primary transition-colors duration-200">Why CTRSpace?</a>
+            </li>
+            <li>
+              <a href="/contact-us.html" class="hover:text-theme-primary transition-colors duration-200">Contact Us</a>
+            </li>
+          </ul>
+          <div class="flex items-center sm:space-x-8 space-x-0">
+            <a id="openSearch" href="#" role="button" aria-label="Open search"
+              class="p-2 text-gray-700 hover:text-gray-900">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-5 w-5">
+                <path
+                  d="M480 272C480 317.9 465.1 360.3 440 394.7L566.6 521.4C579.1 533.9 579.1 554.2 566.6 566.7C554.1 579.2 533.8 579.2 521.3 566.7L394.7 440C360.3 465.1 317.9 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272zM272 416C351.5 416 416 351.5 416 272C416 192.5 351.5 128 272 128C192.5 128 128 192.5 128 272C128 351.5 192.5 416 272 416z" />
+              </svg>
+            </a>
+            <a href="/pricing.html"
+              class="w-36 h-10 rounded-md hidden sm:flex items-center justify-center bg-black hover:bg-theme-primary text-white transition-all duration-200">BUY
+              NOW</a>
+          </div>
+        </div>
+        <button id="sidebarToggle"
+          class="lg:hidden flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 focus:outline-none"
+          aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </nav>
+    <div id="sidebarOverlay"
+      class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none">
+    </div>
+    <aside id="sidebar"
+      class="fixed top-0 right-0 z-50 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 block">
+      <button id="sidebarClose" class="cursor-pointer absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100"
+        aria-label="Close menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-700" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <nav class="mt-20 flex flex-col items-start px-8 space-y-6 font-medium text-base">
+        <a href="#" class="hover:text-theme-primary transition-colors duration-200">Nice Features</a>
+        <a href="#" class="hover:text-theme-primary transition-colors duration-200">The Magic</a>
+        <a href="#" class="hover:text-theme-primary transition-colors duration-200">Why CTRSpace?</a>
+        <a href="/contact-us.html" class="hover:text-theme-primary transition-colors duration-200">Contact Us</a>
+        <a href="/pricing.html"
+          class="w-full mt-8 h-12 rounded-md sm:hidden flex items-center justify-center bg-black hover:bg-theme-primary text-white transition-all duration-200">BUY
+          NOW</a>
+      </nav>
+    </aside>
+    <div id="searchOverlay"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm transition-opacity duration-300 opacity-0 pointer-events-none">
+      <div id="searchBox" class="w-full max-w-2xl px-4 transition duration-300 transform-gpu scale-95 opacity-0">
+        <div class="relative">
+          <input type="search" autofocus placeholder="Search…"
+            class="w-full rounded-lg bg-white/90 py-4 pl-14 pr-12 text-lg text-gray-900 shadow-lg placeholder-gray-500 focus:outline-none" />
+          <svg xmlns="http://www.w3.org/2000/svg"
+            class="pointer-events-none absolute left-4 top-1/2 h-6 w-6 -translate-y-1/2 text-gray-500" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <a id="closeSearch" href="#" role="button" aria-label="Close search"
+            class="absolute right-4 top-1/2 h-6 w-6 -translate-y-1/2 text-gray-500 hover:text-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-full w-full" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" fill="none">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-hero w-full">
+      <div class="max-w-7xl mx-auto pt-32 pb-16 px-4 md:px-6 lg:px-8 text-center">
+        <h1 class="font-normal lg:text-7xl sm:text-6xl text-4xl" data-aos="zoom-in" data-aos-delay="100">
+          <span class="text-theme-primary">Our</span> Services
+        </h1>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="max-w-theme-width mx-auto px-4 md:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 xl:gap-20 items-center">
+          <div class="" data-aos="fade-right" data-aos-delay="100">
+            <img src="/images/our-services-hero.png" alt="our-services-hero" class="max-w-full h-auto rounded-md" />
+          </div>
+          <div data-aos="fade-left" data-aos-delay="200">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight">
+              Powerful Strategies, Proven Marketing Services
+            </h2>
+            <p class="mt-6 text-base sm:text-lg leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Pellentesque in faucibus diam, id venenatis nibh.
+            </p>
+            <ul class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-y-5 gap-x-10">
+              <li
+                class="relative ps-7 font-semibold text-lg md:text-xl before:absolute before:left-0 before:top-1 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Safe and Secure Browsing
+              </li>
+              <li
+                class="relative ps-7 font-semibold text-lg md:text-xl before:absolute before:left-0 before:top-1 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                100% Best Visibility
+              </li>
+              <li
+                class="relative ps-7 font-semibold text-lg md:text-xl before:absolute before:left-0 before:top-1 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                Secure Browsing System
+              </li>
+              <li
+                class="relative ps-7 font-semibold text-lg md:text-xl before:absolute before:left-0 before:top-1 before:h-5 before:w-5 before:bg-[url('/images/nice-features-checkmark.png')] before:bg-no-repeat before:bg-contain">
+                100% Customizations
+              </li>
+            </ul>
+            <a href="#"
+              class="inline-flex mt-10 cursor-pointer rounded bg-cta-gradient px-8 sm:px-10 py-3 font-semibold tracking-wide transition hover:opacity-90">
+              LEARN MORE
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12" data-aos="fade-up" data-aos-duration="700" data-aos-offset="120">
+      <div class="max-w-theme-width mx-auto px-4 md:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight max-w-4xl mx-auto"
+            data-aos="fade-up" data-aos-delay="0">
+            Social Media Services That Deliver Real Results
+          </h2>
+          <p class="mt-6 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto" data-aos="fade-up"
+            data-aos-delay="100">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in faucibus diam, id venenatis nibh.
+            Sed sed magna lobortis, suscipit felis a, ultricies ipsum.
+          </p>
+        </div>
+
+        <div class="space-y-8 md:space-y-10 mt-12" data-aos="fade-up" data-aos-duration="700" data-aos-offset="120">
+
+          <div class="rounded bg-[#ecf9ff]" data-aos="fade-up" data-aos-delay="0" data-aos-duration="600">
+            <div class="grid items-center gap-8 p-6 sm:p-10 lg:p-12 lg:grid-cols-12">
+              <div class="lg:col-span-5 xl:col-span-4" data-aos="zoom-in" data-aos-delay="40">
+                <img src="/images/social-media-image-1.png" alt="Content Creation"
+                  class="w-full h-auto rounded-lg object-cover shadow" />
+              </div>
+              <div class="lg:col-span-7 xl:col-span-8" data-aos="fade-left" data-aos-delay="100">
+                <h3 class="text-2xl sm:text-3xl font-semibold text-slate-900">Content Creation</h3>
+                <p class="mt-3 text-slate-600 max-w-3xl">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eget neque urna. Suspendisse
+                  sed turpis a lacus rhoncus imperdiet quis ac ex. In hac habitasse platea dictumst. Nunc interdum
+                  nulla odio, eget finibus lorem tristique quis. Vivamus non risus sit amet nisi pellentesque.
+                </p>
+                <div class="mt-6">
+                  <a href="#"
+                    class="inline-block cursor-pointer rounded bg-cta-gradient bg-gradient-to-r px-10 py-3 uppercase font-openSans font-bold text-base transition hover:opacity-90">learn
+                    more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded bg-[#fff6e7]" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+            <div class="grid items-center gap-8 p-6 sm:p-10 lg:p-12 lg:grid-cols-12">
+              <div class="lg:col-span-5 xl:col-span-4" data-aos="zoom-in" data-aos-delay="140">
+                <img src="/images/social-media-image-2.png" alt="Advertising Campaigns"
+                  class="w-full h-auto rounded-lg object-cover shadow" />
+              </div>
+              <div class="lg:col-span-7 xl:col-span-8" data-aos="fade-right" data-aos-delay="200">
+                <h3 class="text-2xl sm:text-3xl font-semibold text-slate-900">Advertising Campaigns</h3>
+                <p class="mt-3 text-slate-600 max-w-3xl">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed turpis a lacus rhoncus
+                  imperdiet quis ac ex. In hac habitasse platea dictumst. Nunc interdum nulla odio, eget finibus
+                  lorem tristique quis. Vivamus non risus sit amet nisi pellentesque.
+                </p>
+                <div class="mt-6">
+                  <a href="#"
+                    class="inline-block cursor-pointer rounded bg-cta-gradient bg-gradient-to-r px-10 py-3 uppercase font-openSans font-bold text-base transition hover:opacity-90">learn
+                    more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded bg-[#fef2ff]" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
+            <div class="grid items-center gap-8 p-6 sm:p-10 lg:p-12 lg:grid-cols-12">
+              <div class="lg:col-span-5 xl:col-span-4" data-aos="zoom-in" data-aos-delay="240">
+                <img src="/images/social-media-image-3.png" alt="Social Media Strategy"
+                  class="w-full h-auto rounded-lg object-cover shadow" />
+              </div>
+              <div class="lg:col-span-7 xl:col-span-8" data-aos="fade-left" data-aos-delay="300">
+                <h3 class="text-2xl sm:text-3xl font-semibold text-slate-900">Social Media Strategy</h3>
+                <p class="mt-3 text-slate-600 max-w-3xl">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed turpis a lacus rhoncus
+                  imperdiet quis ac ex. In hac habitasse platea dictumst. Nunc interdum nulla odio, eget finibus
+                  lorem tristique quis.
+                </p>
+                <div class="mt-6">
+                  <a href="#"
+                    class="inline-block cursor-pointer rounded bg-cta-gradient bg-gradient-to-r px-10 py-3 uppercase font-openSans font-bold text-base transition hover:opacity-90">learn
+                    more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded bg-[#e9f5e9]" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">
+            <div class="grid items-center gap-8 p-6 sm:p-10 lg:p-12 lg:grid-cols-12">
+              <div class="lg:col-span-5 xl:col-span-4" data-aos="zoom-in" data-aos-delay="340">
+                <img src="/images/social-media-image-4.png" alt="Community Management"
+                  class="w-full h-auto rounded-lg object-cover shadow" />
+              </div>
+              <div class="lg:col-span-7 xl:col-span-8" data-aos="fade-right" data-aos-delay="400">
+                <h3 class="text-2xl sm:text-3xl font-semibold text-slate-900">Community Management</h3>
+                <p class="mt-3 text-slate-600 max-w-3xl">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed turpis a lacus rhoncus
+                  imperdiet quis ac ex. Nunc interdum nulla odio, eget finibus lorem tristique quis. Vivamus non risus
+                  sit amet nisi pellentesque.
+                </p>
+                <div class="mt-6">
+                  <a href="#"
+                    class="inline-block cursor-pointer rounded bg-cta-gradient bg-gradient-to-r px-10 py-3 uppercase font-openSans font-bold text-base transition hover:opacity-90">learn
+                    more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="max-w-theme-width mx-auto px-4 md:px-6 lg:px-8">
+        <div class="text-center">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium leading-tight max-w-4xl mx-auto"
+            data-aos="fade-up" data-aos-delay="0">
+            Integrate with your favorite tools
+          </h2>
+          <p class="mt-6 text-base sm:text-lg leading-relaxed max-w-4xl mx-auto" data-aos="fade-up"
+            data-aos-delay="100">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in faucibus diam, id venenatis nibh.
+            Sed sed magna lobortis, suscipit felis a, ultricies ipsum.
+          </p>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3 md:grid-rows-2 mt-12" data-aos="fade-up" data-aos-duration="700"
+          data-aos-offset="120">
+          <article class="md:col-start-1 md:row-start-1 rounded-md border border-theme-border bg-white p-8 text-center"
+            data-aos="fade-right" data-aos-delay="0" data-aos-duration="600">
+            <img src="/images/fav-service-1.png" alt="Drive Storage" class="mx-auto h-14 w-14" />
+            <h3 class="mt-5 text-2xl font-semibold">
+              <a href="#" class="hover:text-theme-primary transition-colors duration-200">Drive Storage</a>
+            </h3>
+            <p class="mt-3 text-slate-600 max-w-[48ch] mx-auto line-clamp-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id elit varius, maximus diam sit amet,
+              sollicitudin lorem. Proin risus purus, tristique in condimentum congue, facilisis eget metus.
+            </p>
+          </article>
+
+          <figure class="relative md:col-start-2 md:row-span-2 rounded-md overflow-hidden" data-aos="zoom-in"
+            data-aos-delay="100" data-aos-duration="600">
+            <a href="#">
+              <img src="/images/favourite-service-middle.png" alt="Favorite service visual"
+                class="h-64 w-full object-cover md:h-full md:min-h-[620px]" />
+            </a>
+          </figure>
+
+          <article class="md:col-start-3 md:row-start-1 rounded-md border border-theme-border bg-white p-8 text-center"
+            data-aos="fade-left" data-aos-delay="200" data-aos-duration="600">
+            <img src="/images/fav-service-2.png" alt="Live Chat" class="mx-auto h-14 w-14" />
+            <h3 class="mt-5 text-2xl font-semibold">
+              <a href="#" class="hover:text-theme-primary transition-colors duration-200">Live Chat</a>
+            </h3>
+            <p class="mt-3 text-slate-600 max-w-[48ch] mx-auto line-clamp-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id elit varius, maximus diam sit amet,
+              sollicitudin lorem. Proin risus purus, tristique in condimentum congue, facilisis eget metus.
+            </p>
+          </article>
+
+          <article class="md:col-start-1 md:row-start-2 rounded-md border border-theme-border bg-white p-8 text-center"
+            data-aos="fade-right" data-aos-delay="300" data-aos-duration="600">
+            <img src="/images/fav-service-3.png" alt="Messaging App" class="mx-auto h-14 w-14" />
+            <h3 class="mt-5 text-2xl font-semibold">
+              <a href="#" class="hover:text-theme-primary transition-colors duration-200">Messaging App</a>
+            </h3>
+            <p class="mt-3 text-slate-600 max-w-[48ch] mx-auto line-clamp-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id elit varius, maximus diam sit amet,
+              sollicitudin lorem. Proin risus purus, tristique in condimentum congue, facilisis eget metus.
+            </p>
+          </article>
+
+          <article class="md:col-start-3 md:row-start-2 rounded-md border border-theme-border bg-white p-8 text-center"
+            data-aos="fade-left" data-aos-delay="400" data-aos-duration="600">
+            <img src="/images/fav-service-4.png" alt="Repository" class="mx-auto h-14 w-14" />
+            <h3 class="mt-5 text-2xl font-semibold">
+              <a href="#" class="hover:text-theme-primary transition-colors duration-200">Repository</a>
+            </h3>
+            <p class="mt-3 text-slate-600 max-w-[48ch] mx-auto line-clamp-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id elit varius, maximus diam sit amet,
+              sollicitudin lorem. Proin risus purus, tristique in condimentum congue, facilisis eget metus.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="pt-12 -mb-28 relative z-10">
+      <div
+        class="2xl:mx-auto mx-4 max-w-theme-width lg:rounded-[3rem] sm:rounded-4xl rounded-2xl bg-newsletter-gradient sm:px-8 px-4 lg:py-24 sm:py-12 py-8 text-center shadow-xl bg-[url(/images/green-bg.png)] bg-no-repeat bg-cover">
+        <div class="text-center">
+          <h2 class="font-medium text-3xl sm:text-4xl md:text-5xl">
+            Subscribe to Our Newsletter
+          </h2>
+          <p class="font-semibold mt-5 sm:text-lg text-base">
+            Sign up for our newsletter, and we'll bring you the latest deals,
+            ideas, and updates!
+          </p>
+        </div>
+        <form class="mx-auto mt-10 flex sm:flex-row flex-col sm:gap-0 gap-3 max-w-3xl">
+          <label class="relative flex-1">
+            <span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-5 w-5 fill-gray-500">
+                <path
+                  d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z" />
+              </svg>
+            </span>
+            <input type="email" required placeholder="Your email address"
+              class="h-14 w-full rounded-l-md sm:rounded-r-none rounded-r-md border-0 ps-12 bg-white text-gray-700 placeholder-gray-400 shadow-sm outline-none focus:ring-2 focus:ring-[#F79A4A]" />
+          </label>
+          <button type="submit"
+            class="flex h-14 items-center justify-center gap-2 cursor-pointer rounded-r-md sm:rounded-l-none rounded-l-md bg-black sm:px-8 font-semibold text-white transition hover:bg-theme-primary">
+            Get Started
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-5 w-5 fill-white">
+              <path
+                d="M568.4 37.7C578.2 34.2 589 36.7 596.4 44C603.8 51.3 606.2 62.2 602.7 72L424.7 568.9C419.7 582.8 406.6 592 391.9 592C377.7 592 364.9 583.4 359.6 570.3L295.4 412.3C290.9 401.3 292.9 388.7 300.6 379.7L395.1 267.3C400.2 261.2 399.8 252.3 394.2 246.7C388.6 241.1 379.6 240.7 373.6 245.8L261.2 340.1C252.1 347.7 239.6 349.7 228.6 345.3L70.1 280.8C57 275.5 48.4 262.7 48.4 248.5C48.4 233.8 57.6 220.7 71.5 215.7L568.4 37.7z" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative text-white">
+    <div class="absolute inset-0">
+      <img src="/images/footer-bg.png" alt="Footer Background Image" class="h-full w-full object-cover" />
+    </div>
+    <div class="relative max-w-theme-width mx-auto px-4 pt-40 pb-16">
+      <div class="grid grid-cols-12 gap-y-12 gap-x-0 sm:gap-x-12">
+        <div class="space-y-8 col-span-12 sm:col-span-6 lg:col-span-5">
+          <img src="/images/ctr-space-footer-logo.png" alt="Footer logo" class="h-10" />
+          <p class="max-w-sm leading-relaxed">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-center gap-3">
+              <img src="/images/footer-contact.png" alt="footer-contact" class="w-fit h-full" />
+              <div>
+                <span class="block font-medium text-white/70">Phone</span>
+                +92 42 35692952
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <img src="/images/footer-address.png" alt="footer-address" class="w-fit h-full" />
+              <div>
+                <span class="block font-medium text-white/70">Address</span>
+                30-N Gould St Ste R, Sheridan, WY 82801 USA
+              </div>
+            </li>
+            <li class="flex items-center gap-3">
+              <img src="/images/footer-email.png" alt="footer-email" class="w-fit h-full" />
+              <div>
+                <span class="block font-medium text-white/70">Email</span>
+                needhelp@ctrspace.com
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-2">
+          <h3 class="mb-6 font-medium text-2xl text-theme-primary">
+            Useful Links
+          </h3>
+          <ul class="space-y-3 text-sm">
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">About Us</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Our Services</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Our Themes</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Customization Offers</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Themes & Templates</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">All Products</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Our Blogs</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Plugins</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">FAQ</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Careers</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-2">
+          <h3 class="mb-6 font-medium text-2xl text-theme-primary">
+            Categories
+          </h3>
+          <ul class="space-y-3 text-sm">
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">IT and Software</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Site Templates</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">UI Templates</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Template Kits</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Email Templates</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">WordPress</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Blogging</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Marketing</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">CMS Themes</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">eCommerce</a>
+            </li>
+            <li>
+              <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Health & Fitness</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-3">
+          <h3 class="mb-6 font-medium text-2xl text-theme-primary">
+            Latest Themes
+          </h3>
+          <ul class="divide-y divide-white/10 text-sm">
+            <li class="flex gap-4 items-center py-3">
+              <img src="/images/footer-article-1.png" alt="footer article image"
+                class="h-16 w-20 flex-none rounded-md object-cover" />
+              <div>
+                <a href="#" class="font-medium hover:text-theme-primary">Crypto Icon Theme</a>
+                <p class="mt-1 text-xs text-white/70">October 20, 2024</p>
+              </div>
+            </li>
+            <li class="flex gap-4 items-center py-3">
+              <img src="/images/footer-article-1.png" alt="footer article image"
+                class="h-16 w-20 flex-none rounded-md object-cover" />
+              <div>
+                <a href="#" class="font-medium hover:text-theme-primary">Health Icon Theme</a>
+                <p class="mt-1 text-xs text-white/70">October 20, 2024</p>
+              </div>
+            </li>
+            <li class="flex gap-4 items-center py-3">
+              <img src="/images/footer-article-1.png" alt="footer article image"
+                class="h-16 w-20 flex-none rounded-md object-cover" />
+              <div>
+                <a href="#" class="font-medium hover:text-theme-primary">UnoBlog Theme</a>
+                <p class="mt-1 text-xs text-white/70">October 20, 2024</p>
+              </div>
+            </li>
+            <li class="flex gap-4 items-center py-3">
+              <img src="/images/footer-article-1.png" alt="footer article image"
+                class="h-16 w-20 flex-none rounded-md object-cover" />
+              <div>
+                <a href="#" class="font-medium hover:text-theme-primary">Icon Arena Theme</a>
+                <p class="mt-1 text-xs text-white/70">October 20, 2024</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="relative border-t border-white/10">
+      <div
+        class="max-w-theme-width mx-auto flex flex-col-reverse items-center justify-between gap-6 px-4 py-6 md:flex-row">
+        <p class="text-sm">
+          &copy; 2025 CTRSpace by TechAbout. All Rights Reserved.
+        </p>
+
+        <ul class="flex flex-wrap justify-center gap-6 text-sm">
+          <li>
+            <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Help Center</a>
+          </li>
+          <li>
+            <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Authors</a>
+          </li>
+          <li>
+            <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Privacy Policy</a>
+          </li>
+          <li>
+            <a class="transition hover:text-theme-primary hover:decoration-1" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <button id="toTop" aria-label="Scroll to top"
+        class="fixed bottom-6 right-6 z-50 hidden flex cursor-pointer h-12 w-12 items-center justify-center rounded-full bg-theme-primary text-white shadow-lg transition hover:bg-theme-primary/90">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-6 w-6">
+          <path
+            d="M297.4 169.4C309.9 156.9 330.2 156.9 342.7 169.4L534.7 361.4C547.2 373.9 547.2 394.2 534.7 406.7C522.2 419.2 501.9 419.2 489.4 406.7L320 237.3L150.6 406.6C138.1 419.1 117.8 419.1 105.3 406.6C92.8 394.1 92.8 373.8 105.3 361.3L297.3 169.3z" />
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script type="module" src="/src/main.js"></script>
+  <script src="/src/scripts.js"></script>
+</body>
+
+</html>
